@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const Product=require("./product.js")
 const Post=require("./posts.js")
 const main = async () => {
-    await mongoose.connect('mongodb+srv://ghumarevaishnavib:2g92mEbVuSmtx9vG@cluster0.o4vvkzh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
+    await mongoose.connect(process.env.ATLASURL);
   }
 main().then(() => {
     console.log("Connected....")
